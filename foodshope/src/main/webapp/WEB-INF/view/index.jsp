@@ -5,9 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Food Items</title>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
   <style>
   #header
 {
@@ -35,31 +37,24 @@ float:left;
 padding:10px;
 background-color:ffffcc;
 }
-#footer
-{
-background-color:black;
-color:white;
-clear:both;
-text-align:centre;
-padding:5px;
-}
 </style>
 </head>
 <body>
-
 <div id="header">
 <h3>Welcome To FoodCourt</h3>
 </div>
 <div id="nav">
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
-  <ul class="nav navbar-nav">
-  <li class="active">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
+    </ul>
   <li><a href="/">Home</a></li>
-  <li><a href="Category">Select Category</a></li>
-  <li><a href="AllCategories">All Categories</a></li>
-  <li><a href="Login">Login</a></li>
-  <li><a href="Signup">Signup</a></li>
+  <li><a href="Category">Categories</a></li>
+   <li><a href="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
   <li><a href="Aboutus">About Us</a></li>
   <li><a href="Admin">Admin</a></li>
   </ul>
@@ -93,8 +88,7 @@ padding:5px;
 </div>
 </div>
 </div>
-
-<div id="footer">
-&copy; FoodCourt.com
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

@@ -22,11 +22,11 @@
   </style>
 </head>
 <body id="b1">
-<%
-String name=request.getParameter("p");
-%>
-<centre><h1>Welcome to <%=name %> Page.</h1></centre>
-
-
+<jsp:include page="Header.jsp"></jsp:include>
+<centre><h1>About Us.</h1></centre>
+<p>Food Court consists of different types of quality food products.We assure you the best quality and tasty food.
+Feel free to contact us on www.foodcourt.com and mobile no :9855861234</p>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

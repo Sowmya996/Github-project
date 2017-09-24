@@ -21,11 +21,6 @@ public class HomeController {
 	{
 		return new ModelAndView("Category");
 	}
-	@RequestMapping("/AllCategories")
-	public ModelAndView alcategories()
-	{
-		return new ModelAndView("AllCategories");
-	}
 	@RequestMapping("/Login")
 	public ModelAndView login()
 	{
@@ -40,5 +35,10 @@ public class HomeController {
 	public ModelAndView aboutus()
 	{
 		return new ModelAndView("Aboutus");
+	}
+	@RequestMapping("/Admin")
+	public ModelAndView admin()
+	{
+		return new ModelAndView("Admin");
 	}
 }

@@ -4,13 +4,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title></title>
 </head>
-<body bgcolor="Teal">
-<%
-String name=request.getParameter("p");
-%>
-<centre><h1>Welcome to <%=name %> Page.</h1></centre>
-
+<body bgcolor="AliceBlue">
+<jsp:include page="Header.jsp"></jsp:include>
+<centre><h1>Login Page.</h1></centre>
+<form class="form-horizontal" action="/examples/actions/confirmation.php" method="post">
+        <div class="form-group">
+            <label for="inputUsername" class="control-label col-xs-2">Username</label>
+            <div class="col-xs-2">
+                <input type="text" class="form-control" id="inputUsername" placeholder="Username" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Password</label>
+            <div class="col-xs-2">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+         </form>
+         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>
