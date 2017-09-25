@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.foodshope.model.Products;
 import com.niit.foodshope.model.Supplier;
@@ -18,7 +19,9 @@ import com.niit.foodshope.model.User;
 
 @Configuration
 @ComponentScan("com")
+@EnableTransactionManagement
 public class ApplicationConfiguration {
+	
 	private  Properties getHibernateProperties()
 
 	{

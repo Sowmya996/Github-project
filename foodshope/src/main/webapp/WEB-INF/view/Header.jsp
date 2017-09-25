@@ -14,14 +14,17 @@
 </head>
 <body>
 <!--Starting header-->
-        <nav class="navbar navbar-inverse">
+       <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="${cp}/Home"></a>
+      <div class="container-fluid" style="font-size: 35px;">
+    <a class="navbar-brand" href="#" id="header" >FOOD COURT</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
+    </div>
+     <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="${cp}/Home"><span class="glyphicon glyphicon-home">Home</span></a></li>
-      <li><a href="${cp}/Signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="${cp}/Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="${cp}/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="${cp}/Category"><span class="glyphicon glyphicon-category"></span> Category</a></li>
       <li><a href="${cp}/AboutUs"><span class="glyphicon glyphicon-about-us">About Us</span></a></li>

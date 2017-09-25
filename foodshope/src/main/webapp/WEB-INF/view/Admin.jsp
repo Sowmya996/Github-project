@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title></title>
+<title>Food Court</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -70,6 +70,7 @@
 	  </table>
 	  </div>
       </div>
+      <br/><br/><br/><br/></br><br></br><br></br><br></br><br></br><br></br>
       <div id="section2">
       	<div class="parallax"><hr style="width:100%;color: #ccc"/></div>
         <h1>Add Product</h1>
@@ -80,15 +81,10 @@
         <h1>Add Category</h1>
         <iframe src="Category" frameborder='0' style="width:100%;height: 600px;"></iframe>
       </div>
-      <div id="section4">
-      	<div class="parallax"><hr style="width:100%;color: #ccc"/></div>
-        <h1>Approve Seller</h1>
-        <iframe src="approveSeller" frameborder='0' style="width:100%;height: 600px;"></iframe>
-      </div>
     </div>
   </div>
 </div>
-<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<br><br></br><br></br><br></br><br></br><br></br><br></br>
 <jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>
