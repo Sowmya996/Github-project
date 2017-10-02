@@ -13,7 +13,8 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.niit.foodshope.model.Products;
+import com.niit.foodshope.model.Category;
+import com.niit.foodshope.model.Product;
 import com.niit.foodshope.model.Supplier;
 import com.niit.foodshope.model.User;
 
@@ -49,8 +50,9 @@ public class ApplicationConfiguration {
 
 		localSessionFactoryBuilder.addProperties(getHibernateProperties());
 		localSessionFactoryBuilder.addAnnotatedClass(User.class);
-		localSessionFactoryBuilder.addAnnotatedClass(Products.class);
+		localSessionFactoryBuilder.addAnnotatedClass(Product.class);
 		localSessionFactoryBuilder.addAnnotatedClass(Supplier.class);
+		
 		
 		return localSessionFactoryBuilder.buildSessionFactory();
 	}

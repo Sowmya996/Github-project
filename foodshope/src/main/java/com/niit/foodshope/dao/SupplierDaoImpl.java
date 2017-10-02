@@ -40,7 +40,7 @@ public class SupplierDaoImpl implements SupplierDao{
 		return false;
 	}
 
-	public Supplier getByName(String Name) {
+	public Supplier getByName(String sname) {
 		// TODO Auto-generated method stub
 		return null;
 	}

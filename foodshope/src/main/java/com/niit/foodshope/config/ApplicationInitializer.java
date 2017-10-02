@@ -7,7 +7,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 
 	protected Class<?>[] getRootConfigClasses() {
 
-		return new Class[]{ViewResolverConfiguration.class,MvcConfig.class};
+		return new Class[]{ViewResolverConfiguration.class,MvcConfig.class,SecurityConfiguration.class};
 
 	}
 

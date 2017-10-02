@@ -4,29 +4,20 @@
 <html>
 <head>
 <title>Food Court</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   body {
       position: relative;
-
   }
   ul.nav-pills {
       top: 100px;
       position: fixed;
-
   }
   #section1 {color: #000; background-color: #fff;}
   #section2 {color: #000; background-color: #fff;}
   #section3 {color: #000; background-color: #fff;}
-  #section4 {color: #000; background-color: #fff;}
-  #section51 {color: #000; background-color: #fff;}
-  #section52 {color: #000; background-color: #fff;}
+  
   @media screen and (max-width: 810px) {
-    #section1, #section2, #section3, #section4, #section51, #section52  {
+    #section1, #section2, #section3  {
         margin-left: 150px;
     }
   }
@@ -40,8 +31,8 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">View Products</a></li>
         <li><a href="#section2">Add Product</a></li>
-        <li><a href="#section3">Add Category</a></li>      
-         </ul>
+        <li><a href="#section3">Add Category</a></li>     
+          </ul>
         </li>
       </ul>
     </nav>
@@ -70,7 +61,6 @@
 	  </table>
 	  </div>
       </div>
-      <br/><br/><br/><br/></br><br></br><br></br><br></br><br></br><br></br>
       <div id="section2">
       	<div class="parallax"><hr style="width:100%;color: #ccc"/></div>
         <h1>Add Product</h1>
@@ -80,11 +70,15 @@
         <div class="parallax"><hr style="width:100%;color: #ccc"/></div>
         <h1>Add Category</h1>
         <iframe src="Category" frameborder='0' style="width:100%;height: 600px;"></iframe>
-      </div>
+      </div> 
     </div>
   </div>
 </div>
-<br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+
+
+<br/><br/><br/>
 <jsp:include page="Footer.jsp"></jsp:include>
+
 </body>
 </html>

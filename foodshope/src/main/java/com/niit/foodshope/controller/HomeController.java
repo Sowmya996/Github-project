@@ -1,45 +1,43 @@
 package com.niit.foodshope.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+import com.niit.foodshope.dao.CategoryDao;
+import com.niit.foodshope.dao.ProductDao;
+import com.niit.foodshope.dao.UserDao;
+import com.niit.foodshope.model.User;
+
+@RestController
 public class HomeController {
-	@RequestMapping("/")
-	public ModelAndView index()
-	{
-		return new ModelAndView("index");
+	@Autowired
+	UserDao userdao;
+	@Autowired 
+	ProductDao productdao;
+	@Autowired
+	CategoryDao categorydao;
+
+	@RequestMapping(value="/")
+	public ModelAndView home(){
+		return new ModelAndView("home","categories", categorydao.viewCategories()).addObject("user",userdao);
 	}
-	@RequestMapping("/Home")
-	public ModelAndView home()
-	{
-		return new ModelAndView("index");
+	
+	@RequestMapping(value="/about")
+	public ModelAndView aboutUs(){
+		return new ModelAndView("aboutUs");
 	}
-	@RequestMapping("/Category")
-	public ModelAndView category()
-	{
-		return new ModelAndView("Category");
+	
+	@RequestMapping(value="/authenticate",method=RequestMethod.GET)
+	public ModelAndView login(){
+		return new ModelAndView("login","command",new User());
 	}
-	@RequestMapping("/Login")
-	public ModelAndView login()
-	{
-		return new ModelAndView("Login");
+	@RequestMapping(value="/signUp",method=RequestMethod.GET)
+	public ModelAndView signUp(){
+		return new ModelAndView("signUp","command",new User());
 	}
-	@RequestMapping("/Signup")
-	public ModelAndView signup()
-	{
-		return new ModelAndView("Signup");
-	}
-	@RequestMapping("/Aboutus")
-	public ModelAndView aboutus()
-	{
-		return new ModelAndView("Aboutus");
-	}
-	@RequestMapping("/Admin")
-	public ModelAndView admin()
-	{
-		return new ModelAndView("Admin");
-	}
+	
 
 }

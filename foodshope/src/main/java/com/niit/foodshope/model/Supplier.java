@@ -12,16 +12,16 @@ public class Supplier {
 	private String id ;
 	private String name;
 	private String address;
-	public String getId() {
+	public String getid() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setid(String id) {
 		this.id = id;
 	}
-	public String getName() {
+	public String getname() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setSname(String name) {
 		this.name = name;
 	}
 	public String getAddress() {
@@ -30,4 +30,5 @@ public class Supplier {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
 }

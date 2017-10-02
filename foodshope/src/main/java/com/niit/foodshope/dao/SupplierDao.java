@@ -10,5 +10,5 @@ public interface SupplierDao {
 	public Supplier getById(int id);
 	public void delete(int id);
 	public boolean save(Supplier supplier);
-	public Supplier getByName(String Name );
+	public Supplier getByName(String sname );
 }

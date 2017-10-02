@@ -38,20 +38,20 @@ public class CategoryDaoImpl implements CategoryDao{
 
 	}
 	@Transactional
-	public Category viewCategory(int categoryId) {
+	public Category viewCategory(int Id) {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
 		Criteria cr=session.createCriteria(Category.class);
-		cr.add(Restrictions.eq("id",categoryId));
+		cr.add(Restrictions.eq("id",Id));
 		return (Category)cr.uniqueResult();
 
 	}
 	@Transactional
-	public void deleteCategory(int categoryId) {
+	public void deleteCategory(int Id) {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
 		Criteria cr=session.createCriteria(Category.class);
-		cr.add(Restrictions.eq("id",categoryId));
+		cr.add(Restrictions.eq("id",Id));
 		Category category=(Category)cr.uniqueResult();
 		tx.begin();
 		session.delete(category);
