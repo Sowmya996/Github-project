@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.foodshope.model.Category;
@@ -18,7 +19,7 @@ public class CategoryDaoImpl implements CategoryDao{
 	@Autowired
 	private SessionFactory factory;
 
-	@Transactional
+	@Transactional(propagation=Propagation.SUPPORTS)
 	public void addCategory(Category category) {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
@@ -27,7 +28,7 @@ public class CategoryDaoImpl implements CategoryDao{
 		tx.commit();
 
 	}
-	@Transactional
+	@Transactional(propagation=Propagation.SUPPORTS)
 	public List<Category> viewCategories() {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
@@ -37,21 +38,21 @@ public class CategoryDaoImpl implements CategoryDao{
 		return categories;
 
 	}
-	@Transactional
-	public Category viewCategory(int Id) {
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public Category viewCategory(int categoryId) {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
 		Criteria cr=session.createCriteria(Category.class);
-		cr.add(Restrictions.eq("id",Id));
+		cr.add(Restrictions.eq("id",categoryId));
 		return (Category)cr.uniqueResult();
 
 	}
-	@Transactional
-	public void deleteCategory(int Id) {
+	@Transactional(propagation=Propagation.SUPPORTS)
+	public void deleteCategory(int categoryId) {
 		Session session=factory.getCurrentSession();
 		Transaction tx=session.beginTransaction();
 		Criteria cr=session.createCriteria(Category.class);
-		cr.add(Restrictions.eq("id",Id));
+		cr.add(Restrictions.eq("id",categoryId));
 		Category category=(Category)cr.uniqueResult();
 		tx.begin();
 		session.delete(category);

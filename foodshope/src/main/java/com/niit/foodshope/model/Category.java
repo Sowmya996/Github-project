@@ -1,19 +1,15 @@
 package com.niit.foodshope.model;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-@Component
 public class Category {
 	
 	@Id
@@ -23,6 +19,7 @@ public class Category {
 	private String name;
 	@Size(min=4,max=30,message="Description Should atleast have 4 Char")
 	private String description;
+	@Transient
 	private MultipartFile categoryImage;
 	public int getId() {
 		return Id;

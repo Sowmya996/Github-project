@@ -13,10 +13,13 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.foodshope.model.Cart;
+import com.niit.foodshope.model.CartItem;
 import com.niit.foodshope.model.Category;
 import com.niit.foodshope.model.Product;
 import com.niit.foodshope.model.Supplier;
 import com.niit.foodshope.model.User;
+import com.niit.foodshope.model.UserRole;
 
 @Configuration
 @ComponentScan("com")
@@ -33,7 +36,7 @@ public class ApplicationConfiguration {
 
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 
-		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.hbm2ddl.auto", "create");
 
 		return properties;
 
@@ -50,9 +53,12 @@ public class ApplicationConfiguration {
 
 		localSessionFactoryBuilder.addProperties(getHibernateProperties());
 		localSessionFactoryBuilder.addAnnotatedClass(User.class);
+		localSessionFactoryBuilder.addAnnotatedClass(Category.class);
 		localSessionFactoryBuilder.addAnnotatedClass(Product.class);
 		localSessionFactoryBuilder.addAnnotatedClass(Supplier.class);
-		
+		localSessionFactoryBuilder.addAnnotatedClass(UserRole.class);
+		localSessionFactoryBuilder.addAnnotatedClass(Cart.class);	
+		localSessionFactoryBuilder.addAnnotatedClass(CartItem.class);
 		
 		return localSessionFactoryBuilder.buildSessionFactory();
 	}
@@ -61,7 +67,6 @@ public class ApplicationConfiguration {
 	@Bean(name="transactionManager")
 
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory)
-
 	{
 
 		HibernateTransactionManager hibernateTransactionManager=new HibernateTransactionManager(sessionFactory);
